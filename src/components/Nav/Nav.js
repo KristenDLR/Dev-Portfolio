@@ -22,7 +22,7 @@ function Nav() {
   ];
 
 
-  function tabSelected(name) {
+const tabSelected = (name) => {
     console.log(`${name} clicked`)
   }
 
@@ -35,21 +35,12 @@ function Nav() {
   </h2>
   <nav>
     <ul className="flex-row">
-      <li className="mx-2">
-        <a href="#about">
-          About me remove
-          
-        </a>
-      </li>
-      <li>
-        <span>Contact</span>
-      </li>
        {tabs.map((tab) => (
         <li
           className="mx-1"
           key={tab.name}
         >
-          <span onClick={tabSelected(tab.name)}>
+          <span onClick={() => tabSelected(tab.name)}>
             {tab.name}
           </span>
         </li>
