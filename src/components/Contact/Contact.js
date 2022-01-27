@@ -1,6 +1,7 @@
 import React from "react";
 import { send } from 'emailjs-com';
 import { useState } from 'react';
+import { capitalizeFirstLetter } from '../../utils/helpers';
 // require('dotenv').config()
 
 
@@ -21,7 +22,7 @@ function Contact(props) {
   let SERVICE_ID= process.env.REACT_APP_SERVICE_ID;
   let TEMPLATE_ID= process.env.REACT_APP_TEMPLATE_ID;
   let USER_ID= process.env.REACT_APP_USER_ID;
-  
+
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -46,7 +47,7 @@ function Contact(props) {
 
   return (
     <section>
-      <h1>{currentTab.name}</h1>
+      <h1>{capitalizeFirstLetter(currentTab.name)}</h1>
 
       <div>
         <form onSubmit={onSubmit}>
