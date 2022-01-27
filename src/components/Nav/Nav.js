@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../assets/cover/KristenDeLaRosa.gif';
 
 function Nav() {
   const tabs = [
@@ -28,11 +29,7 @@ const tabSelected = (name) => {
 
   return (
     <header>
-  <h2>
-    <a href="/">
-      <span role="img" aria-label="camera"> 📸</span> Oh Snap!
-    </a>
-  </h2>
+  <img src = {logo} alt="Kristen De La Rosa Logo" height = "100px"/>
   <nav>
     <ul className="flex-row">
        {tabs.map((tab) => (
