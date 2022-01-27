@@ -43,7 +43,7 @@ function App() {
         <Contact></Contact>
       </main>
     </div>
-  );
+  )
 }
 
 export default App;
