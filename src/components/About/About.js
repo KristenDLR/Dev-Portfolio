@@ -1,6 +1,7 @@
 import React from 'react';
 import dots from "../../assets/cover/kai-mason-4BM4nHPBI_Y-unsplash.jpg";
 
+
 function About() {
   return (
     <section className="my-5">
@@ -13,4 +14,3 @@ function About() {
 }
 
 export default About;
-

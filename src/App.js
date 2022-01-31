@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './components/About/About';
 import Nav from './components/Nav/Nav';
+import Portfolio from './components/Portfolio/Portfolio'
 import Contact from './components/Contact/Contact';
 import { useState } from 'react';
 
@@ -19,7 +20,7 @@ function App() {
   },
     {
       name: "portfolio",
-      description: "A breif snapshot of some of my diverse work"
+      description: "A brief snapshot of some of my diverse work"
     },
     {
       name: "resume",
@@ -40,6 +41,7 @@ function App() {
       ></Nav>
       <main>
         <About></About>
+        <Portfolio></Portfolio>
         <Contact></Contact>
       </main>
     </div>

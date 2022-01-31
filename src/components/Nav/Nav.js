@@ -25,7 +25,7 @@ function Nav(props) {
         <img src = {logo} alt="Kristen De La Rosa Logo" height = "100px"/>
 
        {tabs.map((tab) => (
-        <li
+        <li 
           className={`mx-1 ${currentTab.name === tab.name && 'navActive'}`}
           key={tab.name}
         >
