@@ -3,10 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.scss";
 import FlipCard from "../FlipCard/FlipCard";
 import { capitalizeFirstLetter } from '../../utils/helpers';
-import { faReact,faHtml5,faCss3 } from "@fortawesome/free-brands-svg-icons";
-
+// import { faReact,faHtml5,faCss3, faNpm } from "@fortawesome/free-brands-svg-icons";
+// import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 // import { faHtml5, faReact } from '@fortawesome/free-brand-svg-icons'
-
+import reactIcon from "../../assets/icons/React Native-48-96px/icons8-react-native-48.png"
+import npmIcon from "../../assets/icons/NPM-48-96px/icons8-npm-48.png"
+import mongoIcon from "../../assets/icons/MongoDB-48-96px/icons8-mongodb-48.png"
+import voting from "../../assets/card/voteSticker.jpg"
 
 function Portfolio() {
   const currentTab= {
@@ -21,22 +24,27 @@ function Portfolio() {
       id: "1",
       variant: "click",
       front: "Promote The Vote",
-      back: "Back",
-      icon:[faHtml5, faReact ]
+      background:voting,
+      back: "This application was created to provide a platform for US citizens to communicate with others about why they vote and how they better prepare themselves, This Project Uses a Node and Express Web Server, Is backed by a MongoDB Database.Is deployed using Heroku.",
+      lists:["Uses a Node and Express Web Server.", "Is backed by a MongoDB Database." ],
+      icon1:npmIcon,
+      icon2: reactIcon,
+      icon3: mongoIcon,
+      gitHub:"https://github.com/michjmend/Promote-The-Vote"
     },
     {
       id: "2",
       variant: "click",
       front: "Click",
       back: "Back",
-      icon:[faHtml5, faCss3  ]
+      // icon:[faReact, faCss3  ]
     },
     {
       id: "3",
       variant: "click",
       front: "Focus",
       back: "Back",
-      icon:[faHtml5, faReact ]
+      // icon:[faHtml5, faReact ]
     }
   ];
 
