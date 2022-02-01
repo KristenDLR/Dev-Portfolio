@@ -45,7 +45,7 @@ function FlipCard({ card }) {
           <div className="card-body">
             <div className="row">
                 <FontAwesomeIcon icon={faGithub} src={card.gitHub}></FontAwesomeIcon>
-                <h1 className="cardTitle">{card.front}</h1>
+                <h1 className="cardTitle" src={card.gitHub}>{card.front}</h1>
             </div>
             <p className=" back card-text fs-1 fw-bold">{card.back}</p>
             <div className="row">

@@ -26,7 +26,6 @@ function Portfolio() {
       front: "Promote The Vote",
       background:voting,
       back: "This application was created to provide a platform for US citizens to communicate with others about why they vote and how they better prepare themselves, This Project Uses a Node and Express Web Server, Is backed by a MongoDB Database.Is deployed using Heroku.",
-      lists:["Uses a Node and Express Web Server.", "Is backed by a MongoDB Database." ],
       icon1:npmIcon,
       icon2: reactIcon,
       icon3: mongoIcon,

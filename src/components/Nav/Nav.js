@@ -9,6 +9,8 @@ function Nav(props) {
     tabs = [],
     setCurrentTab,
     currentTab,
+    contactSelected,
+    setContactSelected
   } = props;
 
   useEffect(() => {
@@ -23,18 +25,32 @@ function Nav(props) {
        <nav>
        <ul className="flex-row">
         <img src = {logo} alt="Kristen De La Rosa Logo" height = "100px"/>
-
-       {tabs.map((tab) => (
-        <li 
-          className={`mx-1 ${currentTab.name === tab.name && 'navActive'}`}
-          key={tab.name}
-        >
-          <span onClick={() => {setCurrentTab(tab)}}>
-          {capitalizeFirstLetter(tab.name)}
-          </span>
-        </li>
-      ))}
-    </ul>
+          <li className="mx-2">
+            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+              About me
+            </a>
+          </li>
+          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+            <span onClick={() => setContactSelected(true)}>Contact</span>
+          </li>
+          {tabs.map((tab) => (
+            <li
+              className={`mx-1 ${
+                currentTab.name === tab.name && !contactSelected && 'navActive'
+                }`}
+              key={tab.name}
+            >
+              <span
+                onClick={() => {
+                  setCurrentTab(tab);
+                  setContactSelected(false);
+                }}
+              >
+                {capitalizeFirstLetter(tab.name)}
+              </span>
+            </li>
+          ))}
+        </ul>
   </nav>
 </header>
   );

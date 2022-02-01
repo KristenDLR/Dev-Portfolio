@@ -24,9 +24,9 @@ margin-left: 25px;
 
 button {
   margin-left:10px;
-  border-radius: 20px;
-  border: 10px solid #3498db;
-  background: none;
+  border-radius: 5px;
+  border: 1px solid #3498db;
+  background: black;
   padding: 10px 20px;
   width: 150px;
   font-size: 20px;
@@ -39,7 +39,7 @@ button {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: #f0f3f5;
+  color: #3498db;
   &::before {
     content: "";
     position: absolute;

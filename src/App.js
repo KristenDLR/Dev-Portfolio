@@ -3,10 +3,12 @@ import About from './components/About/About';
 import Nav from './components/Nav/Nav';
 import Portfolio from './components/Portfolio/Portfolio'
 import Contact from './components/Contact/Contact';
+import Resume from './components/Resume/Resume';
 import { useState } from 'react';
 
 
 function App() {
+  const [contactSelected, setContactSelected] = useState(false);
 
   const [tabs] = useState([
     {
@@ -38,11 +40,21 @@ function App() {
         tabs={tabs}
         setCurrentTab={setCurrentTab}
         currentTab={currentTab}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
       ></Nav>
       <main>
-        <About></About>
+      {!contactSelected ? (
+       <>
+       <About currentCategory={currentTab}></About>
         <Portfolio></Portfolio>
-        <Contact></Contact>
+      </>
+      ) : (
+
+    <Contact></Contact>
+      )}
+  <Resume></Resume>
+
       </main>
     </div>
   )
