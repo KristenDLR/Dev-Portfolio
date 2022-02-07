@@ -7,8 +7,11 @@ import Resume from './components/Resume/Resume';
 import { useState } from 'react';
 
 
+
+
 function App() {
   const [contactSelected, setContactSelected] = useState(false);
+
 
   const [tabs] = useState([
     {
@@ -46,14 +49,14 @@ function App() {
       <main>
       {!contactSelected ? (
        <>
-       <About currentCategory={currentTab}></About>
+       <About currentTab={currentTab}></About>
         <Portfolio></Portfolio>
       </>
       ) : (
 
     <Contact></Contact>
       )}
-  <Resume></Resume>
+      <Resume></Resume>
 
       </main>
     </div>

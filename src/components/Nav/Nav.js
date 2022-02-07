@@ -10,7 +10,8 @@ function Nav(props) {
     setCurrentTab,
     currentTab,
     contactSelected,
-    setContactSelected
+    setContactSelected,
+
   } = props;
 
   useEffect(() => {
@@ -25,9 +26,11 @@ function Nav(props) {
        <nav>
        <ul className="flex-row">
         <img src = {logo} alt="Kristen De La Rosa Logo" height = "100px"/>
+
+
           <li className="mx-2">
             <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
-              About me
+              Home
             </a>
           </li>
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
@@ -51,6 +54,7 @@ function Nav(props) {
             </li>
           ))}
         </ul>
+
   </nav>
 </header>
   );
