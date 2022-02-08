@@ -1,25 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import logo from '../../assets/cover/KristenDeLaRosa.gif';
-import { capitalizeFirstLetter } from "../../utils/helpers";
+// import { capitalizeFirstLetter } from "../../utils/helpers";
+import { Link } from 'react-router-dom';
 
+function Nav() {
 
-function Nav(props) {
-
-  const {
-    tabs = [],
-    setCurrentTab,
-    currentTab,
-    contactSelected,
-    setContactSelected,
-
-  } = props;
-
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(currentTab.name);
-  }, [currentTab]);
-// const tabSelected = (name) => {
-//     console.log(`${name} clicked`)
-//   }
 
   return (
     <header className="flex-row px-1">
@@ -27,32 +12,13 @@ function Nav(props) {
        <ul className="flex-row">
         <img src = {logo} alt="Kristen De La Rosa Logo" height = "100px"/>
 
+        <div>
+           <Link to="/">About Me</Link>
+           <Link to="/portfolio">Portfolio</Link>
+           <Link to="/resume" >Resume</Link>
+           <Link to="/contact">Contact</Link>
+         </div>
 
-          <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
-              Home
-            </a>
-          </li>
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
-          </li>
-          {tabs.map((tab) => (
-            <li
-              className={`mx-1 ${
-                currentTab.name === tab.name && !contactSelected && 'navActive'
-                }`}
-              key={tab.name}
-            >
-              <span
-                onClick={() => {
-                  setCurrentTab(tab);
-                  setContactSelected(false);
-                }}
-              >
-                {capitalizeFirstLetter(tab.name)}
-              </span>
-            </li>
-          ))}
         </ul>
 
   </nav>

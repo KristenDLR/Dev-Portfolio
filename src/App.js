@@ -4,62 +4,80 @@ import Nav from './components/Nav/Nav';
 import Portfolio from './components/Portfolio/Portfolio'
 import Contact from './components/Contact/Contact';
 import Resume from './components/Resume/Resume';
-import { useState } from 'react';
-
-
-
+// import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [contactSelected, setContactSelected] = useState(false);
+  // const [contactSelected, setContactSelected] = useState(false);
 
 
-  const [tabs] = useState([
-    {
-      name: "about",
-      description:
-        "Who am I?",
-    },
-    {
-      name: "contact",
-    description: "Get in touch with me"
-  },
-    {
-      name: "portfolio",
-      description: "A brief snapshot of some of my diverse work"
-    },
-    {
-      name: "resume",
-      description: "Examine my prior experience",
-    },
-  ]);
+  // const [tabs] = useState([
+  //   {
+  //     name: "about",
+  //     description:
+  //       "Who am I?",
+  //   },
+  //   {
+  //     name: "contact",
+  //   description: "Get in touch with me"
+  // },
+  //   {
+  //     name: "portfolio",
+  //     description: "A brief snapshot of some of my diverse work"
+  //   },
+  //   {
+  //     name: "resume",
+  //     description: "Examine my prior experience",
+  //   },
+  // ]);
 
-  const [currentTab, setCurrentTab] = useState(tabs[0]);
+  // const [currentTab, setCurrentTab] = useState(tabs[0]);
 
 
 
   return (
-    <div>
-      <Nav
-        tabs={tabs}
-        setCurrentTab={setCurrentTab}
-        currentTab={currentTab}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-      ></Nav>
-      <main>
-      {!contactSelected ? (
-       <>
-       <About currentTab={currentTab}></About>
-        <Portfolio></Portfolio>
-      </>
-      ) : (
 
-    <Contact></Contact>
-      )}
-      <Resume></Resume>
+    <BrowserRouter>
+      <Nav></Nav>
+      {/* <div>
+        <Link to="/">About Me</Link>
+        <Link to="/portfolio">Portfolio</Link>
+        <Link to="/resume" >Resume</Link>
+        <Link to="/contact">Contact</Link>
+      </div> */}
+      <Routes>
+        <Route path="/" element={<About />} />
 
-      </main>
-    </div>
+        <Route path="portfolio" element={<Portfolio />} />
+
+        <Route path="/resume" element={<Resume />} />
+
+        <Route path="/contact" element={<Contact />} />
+
+      </Routes>
+    </BrowserRouter>
+    // <div>
+    //   <Nav
+    //     tabs={tabs}
+    //     setCurrentTab={setCurrentTab}
+    //     currentTab={currentTab}
+    //     contactSelected={contactSelected}
+    //     setContactSelected={setContactSelected}
+    //   ></Nav>
+    //   <main>
+    //   {!contactSelected ? (
+    //    <>
+    //    <About currentCategory={currentTab}></About>
+    //     <Portfolio></Portfolio>
+    //   </>
+    //   ) : (
+
+    // <Contact></Contact>
+    //   )}
+    //   <Resume></Resume>
+
+    //   </main>
+    // </div>
   )
 }
 
