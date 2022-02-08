@@ -1,22 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import logo from '../../assets/cover/KristenDeLaRosa.gif';
-import { capitalizeFirstLetter } from "../../utils/helpers";
+// import { capitalizeFirstLetter } from "../../utils/helpers";
+import { Link } from 'react-router-dom';
 
+function Nav() {
 
-function Nav(props) {
-
-  const {
-    tabs = [],
-    setCurrentTab,
-    currentTab,
-  } = props;
-
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(currentTab.name);
-  }, [currentTab]);
-// const tabSelected = (name) => {
-//     console.log(`${name} clicked`)
-//   }
 
   return (
     <header className="flex-row px-1">
@@ -24,17 +12,15 @@ function Nav(props) {
        <ul className="flex-row">
         <img src = {logo} alt="Kristen De La Rosa Logo" height = "100px"/>
 
-       {tabs.map((tab) => (
-        <li 
-          className={`mx-1 ${currentTab.name === tab.name && 'navActive'}`}
-          key={tab.name}
-        >
-          <span onClick={() => {setCurrentTab(tab)}}>
-          {capitalizeFirstLetter(tab.name)}
-          </span>
-        </li>
-      ))}
-    </ul>
+        <div>
+           <Link to="/">About Me</Link>
+           <Link to="/portfolio">Portfolio</Link>
+           <Link to="/resume" >Resume</Link>
+           <Link to="/contact">Contact</Link>
+         </div>
+
+        </ul>
+
   </nav>
 </header>
   );

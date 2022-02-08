@@ -3,48 +3,51 @@ import About from './components/About/About';
 import Nav from './components/Nav/Nav';
 import Portfolio from './components/Portfolio/Portfolio'
 import Contact from './components/Contact/Contact';
-import { useState } from 'react';
-
+import Resume from './components/Resume/Resume';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  const [tabs] = useState([
-    {
-      name: "about",
-      description:
-        "Who am I?",
-    },
-    {
-      name: "contact",
-    description: "Get in touch with me"
-  },
-    {
-      name: "portfolio",
-      description: "A brief snapshot of some of my diverse work"
-    },
-    {
-      name: "resume",
-      description: "Examine my prior experience",
-    },
-  ]);
+  // const [tabs] = useState([
+  //   {
+  //     name: "about",
+  //     description:
+  //       "Who am I?",
+  //   },
+  //   {
+  //     name: "contact",
+  //   description: "Get in touch with me"
+  // },
+  //   {
+  //     name: "portfolio",
+  //     description: "A brief snapshot of some of my diverse work"
+  //   },
+  //   {
+  //     name: "resume",
+  //     description: "Examine my prior experience",
+  //   },
+  // ]);
 
-  const [currentTab, setCurrentTab] = useState(tabs[0]);
 
 
 
   return (
-    <div>
-      <Nav
-        tabs={tabs}
-        setCurrentTab={setCurrentTab}
-        currentTab={currentTab}
-      ></Nav>
-      <main>
-        <About></About>
-        <Portfolio></Portfolio>
-        <Contact></Contact>
-      </main>
-    </div>
+
+    <BrowserRouter>
+      <Nav></Nav>
+
+      <Routes>
+        <Route path="/" element={<About />} />
+
+        <Route path="portfolio" element={<Portfolio />} />
+
+        <Route path="/resume" element={<Resume />} />
+
+        <Route path="/contact" element={<Contact />} />
+
+      </Routes>
+    </BrowserRouter>
+
   )
 }
 

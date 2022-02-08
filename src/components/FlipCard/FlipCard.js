@@ -39,24 +39,29 @@ function FlipCard({ card }) {
 
             <p className=" front card-text fs-1 fw-bold">{card.front}</p>
           </div>
-          <label onClick={handleClick}>Details</label>
+          <button onClick={handleClick}>Details</button>
         </div>
         <div className="card back">
-          <div className="card-body d-flex justify-content-center align-items-center">
-           <FontAwesomeIcon icon={faGithub} src={card.gitHub}>{card.front}</FontAwesomeIcon>
-           </div>
+          <div className="card-body">
+            <div className="row">
+                <FontAwesomeIcon icon={faGithub} src={card.gitHub}></FontAwesomeIcon>
+                <h1 className="cardTitle" src={card.gitHub}>{card.front}</h1>
+            </div>
             <p className=" back card-text fs-1 fw-bold">{card.back}</p>
-
-            <img className="icon" src= {card.icon1} alt="React Icon"></img>
-            <img className="icon" src= {card.icon2} alt="React Icon"></img>
-            <img className="icon" src= {card.icon3} alt="React Icon"></img>
-            {/* <FontAwesomeIcon icon={card.icon[0]} />
-            <FontAwesomeIcon icon={card.icon[1]} /> */}
-            <FontAwesomeIcon onClick={handleClick} icon={faBackwardStep} />
+            <div className="row">
+               <img className="icon" src= {card.icon1} alt="React Icon"></img>
+               <img className="icon" src= {card.icon2} alt="React Icon"></img>
+               <img className="icon" src= {card.icon3} alt="React Icon"></img>
+            </div>
+            <button onClick={handleClick} >
+            <FontAwesomeIcon icon={faBackwardStep} />
+            </button>
+            </div>
         </div>
       </div>
     </div>
   );
 }
+
 
 export default FlipCard;

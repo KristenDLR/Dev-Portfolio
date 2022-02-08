@@ -1,14 +1,26 @@
 import React from 'react';
-import dots from "../../assets/cover/kai-mason-4BM4nHPBI_Y-unsplash.jpg";
-
+import me from '../../assets/large/About/mePurple.jpg'
+import "./styles.scss";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function About() {
   return (
-    <section className="my-5">
-      {/* my-5: m - for classes that set margin, y - for classes that set both *-top and *-bottom, 5 - (by default) for classes that set the margin or padding to $spacer * 3 */}
-      <h1 id="about">Kristen De La Rosa</h1>
-      <img src={dots} className="my-2" style={{ width: "100%" }} alt="cover" />
-    </section>
+
+   <Container fluid>
+    <Row>
+      <Col>
+         <h1 id="about">I am Kristen De La Rosa</h1>
+       </Col>
+       <Col>
+       <div className="containerAbout">
+          <img src={me} alt="Kristen De La Rosa" className="profPic"/>
+       </div>
+       </Col>
+    </Row>
+  </Container>
+
 
   );
 }
