@@ -8,10 +8,11 @@ import Col from 'react-bootstrap/Col';
 function About() {
   return (
 
-   <Container fluid>
-    <Row>
-      <Col>
+   <Container>
+    <Row >
+      <Col className="about">
          <h1 id="about">I am Kristen De La Rosa</h1>
+          <h2 id="about">A Full Stack Developer</h2>
        </Col>
        <Col>
        <div className="containerAbout">

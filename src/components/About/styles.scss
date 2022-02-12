@@ -1,28 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
+
+
 .containerAbout {
   background-image: url("../../assets/cover/kai-mason-4BM4nHPBI_Y-unsplash.jpg");
   background-size: cover;
-  // background-repeat: none;
-  // position: relative;
-  // width: 200px;
-  // height: 150px;
-  // margin: 20px 0;
-  // border-radius: 50% / 10%;
-
   display: block;
   width: 500px;
   height: 500px;
-
   border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+  animation: morph 8s ease-in-out infinite;
+}
+@keyframes morph {
+    0%{
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50%{
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100%{
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
 }
 
+
 #about{
-//   background: white;
-//   border: 10px solid #7b33c1;
-//   margin: 50px;
-//   border-radius: 25px;
-//   font-size: 30px;
-//   padding:10px;
-// }
+margin-top: 50px;
+font-family: 'Bungee Outline', cursive;
 color: #fff;
 text-shadow:
     0 0 7px #fff,
@@ -33,6 +37,46 @@ text-shadow:
     0 0 92px #0fa,
     0 0 102px #0fa,
     0 0 151px #0fa;
+
+animation: flicker 1.5s infinite alternate;
+
+
+}
+
+.about{
+  margin-top:50px !important;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #bc13fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+
+}
+
+@keyframes flicker {
+
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+
+  }
+
+  20%, 24%, 55% {
+      text-shadow: none;
+  }
+
 }
 
 
