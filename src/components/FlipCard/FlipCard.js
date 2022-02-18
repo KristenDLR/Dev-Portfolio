@@ -45,7 +45,7 @@ function FlipCard({ card }) {
         <div className="card back">
           <div className="card-body">
             <div className="row">
-              < a href={card.gitHub}>
+              < a href={card.gitHub} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithub} src={card.gitHub}></FontAwesomeIcon>
                 <h1 className="cardTitle" src={card.gitHub}>{card.front}</h1>
                 </a>
@@ -63,7 +63,7 @@ function FlipCard({ card }) {
                  </button>
               </Col>
               <Col>
-               <a href={card.link}>
+               <a href={card.link} target="_blank" rel="noopener noreferrer" >
                  <button className="buttonPort" >
                  <FontAwesomeIcon icon={faForwardStep} />
                  </button>
