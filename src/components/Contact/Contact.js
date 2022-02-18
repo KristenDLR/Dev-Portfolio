@@ -3,7 +3,11 @@ import { send } from 'emailjs-com';
 import { useState } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 // require('dotenv').config()
-
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Form }from 'react-bootstrap';
+import "./styles.scss";
 
 function Contact(props) {
   const currentTab= {
@@ -47,44 +51,85 @@ function Contact(props) {
 
   return (
     <section>
-      <h1>{capitalizeFirstLetter(currentTab.name)}</h1>
-
-      <div>
-        <form onSubmit={onSubmit}>
+      <h1 id="home2">{capitalizeFirstLetter(currentTab.name)}</h1>
+      <Container>
+      
+        <Form  onSubmit={onSubmit}>
+          <Row>
+            <Col>
+              <h3>Fill out the below form with your contact information, and I will contact you very soon. I look forward to discussing with you my skills.</h3>
+            </Col>
+          </Row>
+          <Row className='rows5'>
+             <Col >
+              <h1>Name </h1>
+              </Col>
+             <Col>
+                <input
+                type='text'
+                 name='from_name'
+                 placeholder='Your name'
+                 value={toSend.from_name}
+                 onChange={handleChange}
+                 required
+                  />
+              </Col>
+           </Row>
+           <Row>
+              <Col >
+                 <h1>Email </h1>
+              </Col>
+              <Col>
+                <input
+                type='text'
+                name='from_email'
+                placeholder='Your email'
+                value={toSend.from_email}
+                onChange={handleChange}
+                required
+                />
+              </Col>
+          </Row>
+          <Row >
+              <Col >
+                 <h1>Phone Number </h1>
+              </Col>
+              <Col>
+                <input
+                type='text'
+                name='from_phone'
+                placeholder='Your phone'
+                value={toSend.from_phone}
+                onChange={handleChange}
+                />
+               </Col>
+           </Row>
+           <Row>
+              <Col>
+                <h1 className="message"> Message</h1>
+             </Col>
+           </Row>
+           <Row>
+          <Col >
          <input
-           type='text'
-           name='from_name'
-           placeholder='from name'
-           value={toSend.from_name}
-           onChange={handleChange}
-           required
-         />
-          <input
-         type='text'
-         name='from_email'
-         placeholder='Your email'
-         value={toSend.from_email}
-         onChange={handleChange}
-         required
-        />
-           <input
-         type='text'
-         name='from_phone'
-         placeholder='Your phone'
-         value={toSend.from_phone}
-         onChange={handleChange}
-        />
-         <input
+           className="messageBox"
            type='text'
            name='message'
            placeholder='Your message'
            value={toSend.message}
            onChange={handleChange}
-         />
+           />
+          </Col>
+        </Row>
+        <Row>
+          <Col className="contactButton" >
+            <button type='submit'>Submit </button>
+          </Col>
+          </Row>
+       </Form>
+     
+      </Container>
 
-          <button type='submit'>Submit </button>
-       </form>
-      </div>
     </section>
   );
 };
