@@ -49,7 +49,7 @@ function Portfolio() {
 
   return (
     <section>
-    <h1>{capitalizeFirstLetter(currentTab.name)}</h1>
+    <h1 id="home2">{capitalizeFirstLetter(currentTab.name)}</h1>
     <div className="container">
       <div className="row h-100">
         <div className="col d-flex flex-column flex-md-row justify-content-around align-items-center">
