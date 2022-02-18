@@ -52,7 +52,7 @@ function Contact(props) {
   return (
     <section>
       <h1 id="home2">{capitalizeFirstLetter(currentTab.name)}</h1>
-      <Container>
+      <Container className="containerC">
       
         <Form  onSubmit={onSubmit}>
           <Row>

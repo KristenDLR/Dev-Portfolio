@@ -12,7 +12,7 @@ function Resume() {
   return (
     <section className="my-5">
       {/* my-5: m - for classes that set margin, y - for classes that set both *-top and *-bottom, 5 - (by default) for classes that set the margin or padding to $spacer * 3 */}
-      <h1>{capitalizeFirstLetter(currentTab.name)}</h1>
+      <h1 id="home2">{capitalizeFirstLetter(currentTab.name)}</h1>
       <img src={skyline} className="my-2" style={{ width: "100%" }} alt="cover" />
     </section>
 

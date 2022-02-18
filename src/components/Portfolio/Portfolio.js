@@ -29,18 +29,40 @@ function Portfolio() {
       icon1:npmIcon,
       icon2: reactIcon,
       icon3: mongoIcon,
-      gitHub:"https://github.com/michjmend/Promote-The-Vote"
+      gitHub:"https://github.com/michjmend/Promote-The-Vote",
+      link:"https://promotethevote.herokuapp.com/"
     },
     {
       id: "2",
-      variant: "click",
+      variant: "two",
       front: "Click",
       back: "Back",
       // icon:[faReact, faCss3  ]
     },
     {
       id: "3",
-      variant: "click",
+      variant: "three",
+      front: "Focus",
+      back: "Back",
+      // icon:[faHtml5, faReact ]
+    },
+    {
+      id: "4",
+      variant: "four",
+      front: "Focus",
+      back: "Back",
+      // icon:[faHtml5, faReact ]
+    },
+    {
+      id: "5",
+      variant: "five",
+      front: "Focus",
+      back: "Back",
+      // icon:[faHtml5, faReact ]
+    },
+    {
+      id: "6",
+      variant: "six",
       front: "Focus",
       back: "Back",
       // icon:[faHtml5, faReact ]
@@ -50,11 +72,14 @@ function Portfolio() {
   return (
     <section>
     <h1 id="home2">{capitalizeFirstLetter(currentTab.name)}</h1>
-    <div className="container">
+    <div className="containerP">
       <div className="row h-100">
         <div className="col d-flex flex-column flex-md-row justify-content-around align-items-center">
           {cards.map((card) => (
-            <FlipCard key={card.id} card={card} />
+            <FlipCard className= "flex-wrap" key={card.id} card={card}  style={{
+              display: "flex",
+              flexWrap: "wrap",
+              flexDirection: "row"}}/>
           ))}
         </div>
       </div>
