@@ -5,13 +5,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function About() {
+function Home() {
   return (
 
-   <Container fluid>
-    <Row>
-      <Col>
-      <h1 id="about">About Me</h1>
+   <Container>
+    <Row >
+      <Col className="about">
+         <h1 id="about">I am Kristen De La Rosa</h1>
+          <h2 id="about">A Full Stack Developer</h2>
        </Col>
        <Col>
        <div className="containerAbout">
@@ -25,4 +26,4 @@ function About() {
   );
 }
 
-export default About;
+export default Home;

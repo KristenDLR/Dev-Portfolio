@@ -8,20 +8,21 @@ function Nav() {
 
   return (
     <header className="flex-row px-1">
-       <nav>
-       <ul className="flex-row">
-        <img src = {logo} alt="Kristen De La Rosa Logo" height = "100px"/>
+    <nav>
+    <ul className="flex-row">
+    
 
-        <div>
-           <Link to="/">About Me</Link>
-           <Link to="/portfolio">Portfolio</Link>
-           <Link to="/resume" >Resume</Link>
-           <Link to="/contact">Contact</Link>
-         </div>
+     <div>
+        <Link to="/"><img src = {logo} alt="Kristen De La Rosa Logo" height = "100px"/></Link>
+        <Link to="/about">About Me</Link>
+        <Link to="/portfolio">Portfolio</Link>
+        <Link to="/resume" >Resume</Link>
+        <Link to="/contact">Contact</Link>
+      </div>
 
-        </ul>
+     </ul>
 
-  </nav>
+</nav>
 </header>
   );
 }
