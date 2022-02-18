@@ -10,11 +10,19 @@ body {
   margin-bottom: 80px;
 }
 
-.container {
+.containerP {
   background-image: url("../../assets/cover/kai-mason-4BM4nHPBI_Y-unsplash.jpg");
   background-size: cover;
   border-radius: 30px;
   padding:30px;
+}
+
+.cardTitle{
+  text-align: center;
+}
+
+.buttonPort{
+  width:70%;
 }
 
 .front{
@@ -87,7 +95,7 @@ button {
 }
 
 .flip-card-outer {
-  width: 300px;
+  width: 90%;
   height: 400px;
   margin: 25px 0;
 
