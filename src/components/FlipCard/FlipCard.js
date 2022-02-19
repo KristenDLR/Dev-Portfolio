@@ -52,9 +52,9 @@ function FlipCard({ card }) {
             </div>
             <p className=" back card-text fs-1 fw-bold">{card.back}</p>
             <div className="row">
-               <img className="icon" src= {card.icon1} alt="React Icon"></img>
-               <img className="icon" src= {card.icon2} alt="React Icon"></img>
-               <img className="icon" src= {card.icon3} alt="React Icon"></img>
+               <img className="icon" src= {card.icon1} alt="icon"></img>
+               <img className="icon" src= {card.icon2} alt="icon"></img>
+               <img className="icon" src= {card.icon3} alt="icon"></img>
             </div>
             <Row>
               <Col>
