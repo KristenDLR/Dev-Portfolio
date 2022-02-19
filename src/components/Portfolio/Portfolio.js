@@ -16,6 +16,8 @@ import apiIcon from "../../assets/icons/API-48-96px/icons8-api-48.png";
 import cssIcon from "../../assets/icons/CSS3-48-96px/icons8-css3-48.png";
 import jsIcon from "../../assets/icons/JavaScript-48-96px/icons8-javascript-48.png";
 import phone from "../../assets/card/phone.jpg";
+import Footer from '../Footer/Footer';
+
 
 function Portfolio() {
   const currentTab= {
@@ -65,6 +67,7 @@ function Portfolio() {
   ];
 
   return (
+ 
     <section>
     <h1 id="home2">{capitalizeFirstLetter(currentTab.name)}</h1>
     <div className="containerP">
@@ -76,7 +79,10 @@ function Portfolio() {
         </div>
       </div>
     </div>
+    <Footer></Footer>
     </section>
+ 
+   
   )
 }
 

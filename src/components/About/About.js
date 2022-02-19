@@ -5,7 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTerminal } from '@fortawesome/free-solid-svg-icons'
+import { faTerminal } from '@fortawesome/free-solid-svg-icons';
+import Footer from '../Footer/Footer';
 
 function About() {
   return (
@@ -37,8 +38,9 @@ function About() {
        </div>
        </Col>
     </Row>
+    <Footer></Footer>
   </Container>
-
+ 
 
   );
 }

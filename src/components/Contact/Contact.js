@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Form }from 'react-bootstrap';
 import "./styles.scss";
+import Footer from '../Footer/Footer';
 
 function Contact(props) {
   const currentTab= {
@@ -129,7 +130,7 @@ function Contact(props) {
        </Form>
      
       </Container>
-
+      <Footer></Footer>
     </section>
   );
 };
