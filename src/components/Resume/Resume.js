@@ -11,7 +11,6 @@ function Resume() {
     description: "Examine my prior experience",
   };
 
-
   return (
 
     <section className="my-5">
