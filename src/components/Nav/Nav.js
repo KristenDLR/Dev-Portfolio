@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../assets/cover/KristenDeLaRosa.gif';
-// import { capitalizeFirstLetter } from "../../utils/helpers";
 import { Link } from 'react-router-dom';
 
 function Nav() {

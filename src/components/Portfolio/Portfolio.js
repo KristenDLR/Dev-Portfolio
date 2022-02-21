@@ -3,9 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.scss";
 import FlipCard from "../FlipCard/FlipCard";
 import { capitalizeFirstLetter } from '../../utils/helpers';
-// import { faReact,faHtml5,faCss3, faNpm } from "@fortawesome/free-brands-svg-icons";
-// import { faDatabase } from '@fortawesome/free-solid-svg-icons'
-// import { faHtml5, faReact } from '@fortawesome/free-brand-svg-icons'
 import reactIcon from "../../assets/icons/React Native-48-96px/icons8-react-native-48.png"
 import npmIcon from "../../assets/icons/NPM-48-96px/icons8-npm-48.png"
 import htmlIcon from "../../assets/icons/Html 5-48-96px/icons8-html-5-48.png"
