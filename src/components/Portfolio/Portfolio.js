@@ -22,8 +22,6 @@ function Portfolio() {
     description: "A brief snapshot of some of my diverse work"
   };
 
-
-
   const cards = [
     {
       id: "1",
@@ -79,8 +77,7 @@ function Portfolio() {
     </div>
     <Footer></Footer>
     </section>
- 
-   
+
   )
 }
 
