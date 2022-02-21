@@ -2,7 +2,6 @@ import React from "react";
 import { send } from 'emailjs-com';
 import { useState } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-// require('dotenv').config()
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';

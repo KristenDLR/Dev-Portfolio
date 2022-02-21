@@ -9,29 +9,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  // const [tabs] = useState([
-  //   {
-  //     name: "about",
-  //     description:
-  //       "Who am I?",
-  //   },
-  //   {
-  //     name: "contact",
-  //   description: "Get in touch with me"
-  // },
-  //   {
-  //     name: "portfolio",
-  //     description: "A brief snapshot of some of my diverse work"
-  //   },
-  //   {
-  //     name: "resume",
-  //     description: "Examine my prior experience",
-  //   },
-  // ]);
-
-
-
-
   return (
 
     <BrowserRouter>
@@ -39,6 +16,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        
+        <Route path="/Dev-Portfolio" element={<Home />} />
 
         <Route path="/about" element={<About />} />
 
