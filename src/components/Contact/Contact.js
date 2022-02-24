@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { send } from 'emailjs-com';
 import { useState } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
@@ -8,12 +8,16 @@ import Col from 'react-bootstrap/Col';
 import { Form }from 'react-bootstrap';
 import "./styles.scss";
 import Footer from '../Footer/Footer';
+import Modal from '../Modal/Modal';
 
 function Contact(props) {
   const currentTab= {
     name: "contact",
     description: "Get in touch with me",
   };
+  
+const modal = useRef(null)
+
 
   const [toSend, setToSend] = useState({
     from_name: '',
@@ -24,7 +28,7 @@ function Contact(props) {
   });
 
   let SERVICE_ID= process.env.REACT_APP_SERVICE_ID;
-  let TEMPLATE_ID= process.env.REACT_APP_TEMPLATE_ID;
+  let TEMPLATE_ID= "template_d3h5g6b";
   let USER_ID= process.env.REACT_APP_USER_ID;
 
 
@@ -49,6 +53,16 @@ function Contact(props) {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
+  // https://reactgo.com/clear-input-field-value-react/
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // clearing the values
+  //    this.toSend.from_name.value = "";
+   
+  // }
+
+
+  
   return (
     <section>
       <h1 id="home2">{capitalizeFirstLetter(currentTab.name)}</h1>
@@ -70,6 +84,7 @@ function Contact(props) {
                  name='from_name'
                  placeholder='Your name'
                  value={toSend.from_name}
+                //  ref={(el) => (toSend.from_name = el)}
                  onChange={handleChange}
                  required
                   />
@@ -123,11 +138,13 @@ function Contact(props) {
         </Row>
         <Row>
           <Col className="contactButton" >
-            <button type='submit'>Submit </button>
+            <button type='submit' onClick={() => modal.current.open()}>Submit </button>
           </Col>
           </Row>
        </Form>
-     
+      <Modal ref={modal}>
+      Thank you for filling out your information! Look out for my email, I will be getting in touch as soon as possible.
+      </Modal>
       </Container>
       <Footer></Footer>
     </section>
