@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Dev-Portfolio/static/css/main.3e3adf7a.css",
-    "main.js": "/Dev-Portfolio/static/js/main.8c1a28ff.js",
+    "main.css": "/Dev-Portfolio/static/css/main.c050490c.css",
+    "main.js": "/Dev-Portfolio/static/js/main.f0e3bc7c.js",
     "static/js/787.d0fc6f61.chunk.js": "/Dev-Portfolio/static/js/787.d0fc6f61.chunk.js",
     "static/media/kai-mason-4BM4nHPBI_Y-unsplash.jpg": "/Dev-Portfolio/static/media/kai-mason-4BM4nHPBI_Y-unsplash.bbbb46f979bbdd10c65b.jpg",
     "static/media/phone.jpg": "/Dev-Portfolio/static/media/phone.d5284a16d24188cdae43.jpg",
@@ -12,12 +12,12 @@
     "static/media/mePurple.jpg": "/Dev-Portfolio/static/media/mePurple.f252cdfcfae5b46783a9.jpg",
     "static/media/2022WDResumeLA.pdf": "/Dev-Portfolio/static/media/2022WDResumeLA.bc3d726ca6b4c925cd28.pdf",
     "index.html": "/Dev-Portfolio/index.html",
-    "main.3e3adf7a.css.map": "/Dev-Portfolio/static/css/main.3e3adf7a.css.map",
-    "main.8c1a28ff.js.map": "/Dev-Portfolio/static/js/main.8c1a28ff.js.map",
+    "main.c050490c.css.map": "/Dev-Portfolio/static/css/main.c050490c.css.map",
+    "main.f0e3bc7c.js.map": "/Dev-Portfolio/static/js/main.f0e3bc7c.js.map",
     "787.d0fc6f61.chunk.js.map": "/Dev-Portfolio/static/js/787.d0fc6f61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e3adf7a.css",
-    "static/js/main.8c1a28ff.js"
+    "static/css/main.c050490c.css",
+    "static/js/main.f0e3bc7c.js"
   ]
 }
